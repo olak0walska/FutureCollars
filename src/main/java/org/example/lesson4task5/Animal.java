@@ -1,6 +1,6 @@
 package org.example.lesson4task5;
 
-public class Animal {
+public abstract class Animal {
     String name;
 
     public Animal(String name) {
