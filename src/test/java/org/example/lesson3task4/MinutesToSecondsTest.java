@@ -8,14 +8,20 @@ import static org.junit.jupiter.api.Assertions.*;
 class MinutesToSecondsTest {
 
     @org.junit.jupiter.api.Test
-    void ShouldConvertTwoMinutesTo120Seconds() {
-        int convertMinutesToSeconds = MinutesToSeconds.convertMinutesToSeconds(2);
-        Assertions.assertEquals(120, convertMinutesToSeconds);
+    void shouldConvertTwoMinutesTo120Seconds() {
+        //when
+        int seconds = MinutesToSeconds.seconds(2);
+
+        //then
+        Assertions.assertEquals(120, seconds);
     }
 
     @org.junit.jupiter.api.Test
-    void ShouldConvert20MinutesIntoSeconds() {
-        int convertMinutesToSeconds = MinutesToSeconds.convertMinutesToSeconds(20);
-        Assertions.assertEquals(1200, convertMinutesToSeconds);
+    void shouldConvert20MinutesIntoSeconds() {
+        //when
+        int seconds = MinutesToSeconds.seconds(20);
+
+        //then
+        Assertions.assertEquals(1200, seconds);
     }
 }
