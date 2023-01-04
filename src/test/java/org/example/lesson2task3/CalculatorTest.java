@@ -14,7 +14,7 @@ class CalculatorTest {
     }
 
     @Test
-    void shouldSubtractfirstValueFromSecondValue() {
+    void shouldSubtractFirstValueFromSecondValue() {
         int subtract = Calculator.subtract(5, 3);
         Assertions.assertEquals(2, subtract);
     }
