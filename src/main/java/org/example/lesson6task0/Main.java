@@ -1,6 +1,7 @@
 package org.example.lesson6task0;
 
 import java.io.BufferedWriter;
+import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Paths;
 
@@ -13,9 +14,8 @@ public class Main {
     public static void writeToFile(String pathToFile, String text) {
         try (BufferedWriter writer = Files.newBufferedWriter(Paths.get(pathToFile))) {
             writer.write(text);
-        } catch (Exception exception) {
+        } catch (IOException exception) {
             exception.printStackTrace();
-            System.out.println("błąd");
         }
     }
 }
