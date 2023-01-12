@@ -1,16 +1,16 @@
 package org.example.lesson3task1;
 
 public class Seat {
-    int seatNumber;
-    int rowNumber;
-    boolean isThatSeatTaken;
+    private final int seatNumber;
+    private final int rowNumber;
+    private boolean isTaken;
 
-    public Seat() {
+    public void setIsTaken (boolean isTakenParameter){
+        isTaken = isTakenParameter;
     }
 
-    public Seat(int seatNumber, int rowNumber, boolean isThatSeatTaken) {
+    public Seat(int seatNumber, int rowNumber) {
         this.seatNumber = seatNumber;
         this.rowNumber = rowNumber;
-        this.isThatSeatTaken = isThatSeatTaken;
     }
 }
