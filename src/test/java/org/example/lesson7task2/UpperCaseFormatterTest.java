@@ -11,15 +11,26 @@ import static org.junit.jupiter.api.Assertions.*;
 class UpperCaseFormatterTest {
 
     @ParameterizedTest
-    @NullAndEmptySource
     @ValueSource(strings = {"aLA", "Ma", "DwA", "KoTy"})
-    void shouldVerifyStringTrimAndInUpperCase(String input) {
+    void shouldVerifyStringInUpperCase(String input) {
         String expectedValue;
-        if (input != null) {
-            expectedValue = input.toUpperCase();
-        } else {
-            expectedValue = "";
-        }
+
+        //when
+        expectedValue = input.toUpperCase();
+
+        //then
+        Assertions.assertEquals(expectedValue, UpperCaseFormatter.formatText(input));
+    }
+
+    @ParameterizedTest
+    @NullAndEmptySource
+    void shouldVerifyIfStringIsNullOrEmpty(String input){
+        String expectedValue;
+
+        //when
+        expectedValue = "";
+
+        //then
         Assertions.assertEquals(expectedValue, UpperCaseFormatter.formatText(input));
     }
 }
