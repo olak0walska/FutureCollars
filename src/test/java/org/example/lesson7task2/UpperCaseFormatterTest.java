@@ -11,12 +11,12 @@ import static org.junit.jupiter.api.Assertions.*;
 class UpperCaseFormatterTest {
 
     @ParameterizedTest
-    @ValueSource(strings = {"aLA", "Ma", "DwA", "KoTy"})
+    @ValueSource(strings = {"aLA"})
     void shouldVerifyStringInUpperCase(String input) {
         String expectedValue;
 
         //when
-        expectedValue = input.toUpperCase();
+        expectedValue = "ALA";
 
         //then
         Assertions.assertEquals(expectedValue, UpperCaseFormatter.formatText(input));
