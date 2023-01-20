@@ -27,7 +27,7 @@ public class Employee {
         this.baseSalary = baseSalary;
     }
 
-    public Empl   oyee(String name, String surname, int age, BigDecimal baseSalary, BigDecimal bonus) {
+    public Employee(String name, int age, BigDecimal baseSalary, BigDecimal bonus, String surname) {
         this.name = name;
         this.surname = surname;
         this.age = age;
