@@ -8,7 +8,6 @@ public class Employee {
     private int age;
     private BigDecimal baseSalary;
     private BigDecimal bonus;
-    public static final String WHITE_SPACE = " ";
 
     public Employee(String name, String surname) {
         this.name = name;
@@ -16,26 +15,32 @@ public class Employee {
     }
 
     public Employee(String name, String surname, int age) {
-        new Employee(name, surname);
+        this.name = name;
+        this.surname = surname;
         this.age = age;
     }
 
     public Employee(String name, String surname, int age, BigDecimal baseSalary) {
-        new Employee(name, surname, age);
+        this.name = name;
+        this.surname = surname;
+        this.age = age;
         this.baseSalary = baseSalary;
     }
 
-    public Employee(String name, int age, BigDecimal baseSalary, BigDecimal bonus, String surname) {
-        new Employee(name, surname, age, baseSalary);
+    public Empl   oyee(String name, String surname, int age, BigDecimal baseSalary, BigDecimal bonus) {
+        this.name = name;
+        this.surname = surname;
+        this.age = age;
+        this.baseSalary = baseSalary;
         this.bonus = bonus;
     }
 
-    public String getEmployee_Info() {
-        return "Employee name : " + name + WHITE_SPACE + surname;
+    public String getEmployeeInfo() {
+        return "Employee name : " + name + " " + surname;
     }
 
     public String getEmployeeDetails() {
-        return "Employee details : " + name + WHITE_SPACE + surname + " is " + age;
+        return "Employee details : " + name + " " + surname + " is " + age;
     }
 
     public BigDecimal getTotalSalary() {
