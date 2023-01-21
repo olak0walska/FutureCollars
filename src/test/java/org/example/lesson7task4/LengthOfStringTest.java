@@ -14,12 +14,12 @@ class StringLengthTest {
 
     @ParameterizedTest
     @MethodSource
-    void shouldCountLengthOfString(String input, int expected) {
+    void provideArguments(String input) {
         int actualValue = input.length();
-        Assertions.assertEquals(expected, actualValue);
+        Assertions.assertEquals(LengthOfString.length(input), actualValue);
     }
 
-    private static Stream<Arguments> shouldCountLengthOfString() {
+    private static Stream<Arguments> provideArguments() {
         return Stream.of(
                 Arguments.of("okno", 4),
                 Arguments.of("ola kinga klaudia", 17),
