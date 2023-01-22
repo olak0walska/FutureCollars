@@ -5,9 +5,9 @@ import java.util.regex.Pattern;
 
 public class Main {
     public static void main(String[] args) {
-        Pattern pattern = Pattern.compile("\\d\\d\\d\\d\\d\\d\\d\\d\\d\\d\\d");
-        Matcher matcher = pattern.matcher("12345678901");
-        boolean matches = matcher.matches();
-        System.out.println(matches);
+        System.out.println(Pesel.isPesel("12345678901"));
+        System.out.println(Pesel.isPesel("123456a8901"));
+        System.out.println(Pesel.isPesel("12asdfb"));
+        System.out.println(Pesel.isPesel("12345678901"));
     }
 }
