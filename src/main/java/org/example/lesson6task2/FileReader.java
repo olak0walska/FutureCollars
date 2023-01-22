@@ -4,8 +4,8 @@ import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Path;
 
-public class EverySecondLine {
-    public static void ReadAndDisplay(String filePath) {
+public class FileReader {
+    public static void printEverySecondLine(String filePath) {
         try {
             String text = Files.readString(Path.of(filePath));
             String[] lines = text.split("\n");
