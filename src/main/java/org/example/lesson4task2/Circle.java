@@ -5,8 +5,8 @@ import static java.lang.Math.pow;
 public class Circle extends Shape {
     private double radius;
 
-    public Circle(double diameter) {
-        this.radius = diameter;
+    public Circle(double radius) {
+        this.radius = radius;
     }
 
     @Override
