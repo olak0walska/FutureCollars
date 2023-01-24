@@ -4,15 +4,9 @@ import java.time.LocalDate;
 
 public class Main {
     public static void main(String[] args) {
-        LocalDate dateNow = LocalDate.now();
-        LocalDate dateOfBirth = LocalDate.of(2004, 01, 18);
 
-        int age = dateNow.getYear() - dateOfBirth.getYear();
-        String dayOfBirth = String.valueOf(dateOfBirth.getDayOfWeek());
-        int weekOfYear = (dateOfBirth.getDayOfYear() / 7) + 1;
-
-        System.out.println(age);
-        System.out.println(dayOfBirth);
-        System.out.println(weekOfYear);
+        System.out.println(BirthDate.age(LocalDate.parse("2004-01-18")));
+        System.out.println(BirthDate.weekOfYear(LocalDate.parse("1997-08-20")));
+        System.out.println(BirthDate.dayOfBirth(LocalDate.parse("1994-05-20")));
     }
 }
