@@ -1,7 +1,7 @@
 package org.example.lesson4task2;
 
 public class Rectangle extends Shape {
-     double lengthOfTheSideA;
+    private double lengthOfTheSideA;
     private double lengthOfTheSideB;
 
     public Rectangle(double lengthOfTheSideA, double lengthOfTheSideB) {
