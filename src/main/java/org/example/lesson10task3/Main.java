@@ -7,5 +7,6 @@ public class Main {
         System.out.println(Url.isUrl("https://mail.google.com"));
         System.out.println(Url.isUrl("http://wiadmosci.onet.pl"));
         System.out.println(Url.isUrl("http://www.onet.pl"));
+        System.out.println(Url.isUrl(";;;;;.com"));
     }
 }
