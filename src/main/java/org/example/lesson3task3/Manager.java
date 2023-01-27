@@ -6,10 +6,10 @@ public class Manager extends BaseEmployee {
     private static final int BONUS = 500;
     private int bonus;
 
-    public Manager(String name, String surname, int employmentYears, int salary) {
-        super(name, surname, employmentYears);
-        this.bonus = BONUS;
+    public void setBonus(int bonus) {
+        this.bonus = bonus;
     }
+
 
     public Manager(String name, String surname, int employmentYears) {
         super(name, surname, employmentYears, BASE_SALARY);
