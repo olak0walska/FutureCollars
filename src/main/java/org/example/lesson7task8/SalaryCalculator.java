@@ -1,15 +1,16 @@
 package org.example.lesson7task8;
 
 public class SalaryCalculator {
-    private final BaseSalaryProvider baseSalaryProvider;
+    private WeekendWorkProvider weekendWorkProvider;
+    private WorkDayProvider workDayProvider;
 
-    public SalaryCalculator(BaseSalaryProvider baseSalaryProvider) {
-        this.baseSalaryProvider = baseSalaryProvider;
+    public SalaryCalculator(WeekendWorkProvider weekendWorkProvider, WorkDayProvider workDayProvider) {
+        this.weekendWorkProvider = weekendWorkProvider;
+        this.workDayProvider = workDayProvider;
     }
 
-    public double calculateBaseSalary(WorkingDay workingDay, double dailyRate) {
-        double workingDays = baseSalaryProvider.getBaseSalary(workingDay);
-        return workingDays * dailyRate;
+    public double getSalary(int workedDaysAmount, int weekendWorkedDays, double extraBonus) {
+        return workDayProvider.getSalary(workedDaysAmount) + weekendWorkProvider.getWeekendSalary(weekendWorkedDays) + extraBonus;
     }
 }
 
