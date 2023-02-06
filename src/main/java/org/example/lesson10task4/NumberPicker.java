@@ -8,24 +8,22 @@ public class NumberPicker {
         Pattern pattern = Pattern.compile("^[+-]?[0-9]+$");
         Matcher matcher = pattern.matcher(number);
         boolean matches = matcher.matches();
-        if (matches == true) {
+        if (matches) {
             return number + " to liczba całkowita";
-        } else if (matches == false) {
+        } else {
             Pattern pattern2 = Pattern.compile("^[+-]?([0-9]*)[.]{1}[0-9]+$");
             Matcher matcher2 = pattern2.matcher(number);
             boolean matches2 = matcher2.matches();
-            if (matches2 == true)
+            if (matches2)
                 return number + " to liczba zmiennoprzecinkowa";
             if (matches2 == false || matches == false) {
                 Pattern pattern3 = Pattern.compile("^(?:-?\\d*)\\.?\\d+[eE][-\\+]?\\d+$");
 
                 Matcher matcher3 = pattern3.matcher(number);
                 boolean matches3 = matcher3.matches();
-                if (matches3 == true)
+                if (matches3)
                     return number + " to liczba w notacji naukowej";
             }
-        } else {
-            return "to nie jest liczba";
         }
         return "";
     }
