@@ -39,7 +39,7 @@ public class PizzaMenu {
                 .forEach(System.out::println);
 
         if (menu.stream()
-                .allMatch(pizza -> pizza.isVegetarian() && pizza.getIngredients().contains("mozzarella"))) {
+                .allMatch(pizza -> pizza.getIngredients().contains("mozzarella"))) {
             System.out.println("Wszystkie pozycje w menu zawierając mozzarellę");
         } else {
             System.out.println("Nie wszystkie pozycje w menu zawierają mozzarellę");
