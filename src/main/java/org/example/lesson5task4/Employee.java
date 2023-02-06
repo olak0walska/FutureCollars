@@ -12,27 +12,23 @@ public class Employee {
     public Employee(String name, String surname) {
         this.name = name;
         this.surname = surname;
+        this.baseSalary = BigDecimal.ZERO;
+        this.bonus = BigDecimal.ZERO;
     }
 
     public Employee(String name, String surname, int age) {
         this(name, surname);
         this.age = age;
-        this.baseSalary = BigDecimal.ZERO;
-        this.bonus = BigDecimal.ZERO;
-
     }
 
     public Employee(String name, String surname, int age, BigDecimal baseSalary) {
         this(name, surname, age);
         this.baseSalary = baseSalary;
-        this.bonus = BigDecimal.ZERO;
-
     }
 
     public Employee(String name, String surname, int age, BigDecimal baseSalary, BigDecimal bonus) {
         this(name, surname, age, baseSalary);
         this.bonus = bonus;
-
     }
 
     public String getEmployeeInfo() {
