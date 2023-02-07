@@ -21,8 +21,9 @@ public class Main {
     }
 
     private static boolean isNotEmpty(String text) {
-        if (text.length() > 0) ;
-        return true;
+        if (text.length() > 0) {
+            return true;
+        } else return false;
     }
 
     private static boolean isPalindrome(String text) {
