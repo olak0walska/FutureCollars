@@ -3,13 +3,13 @@ package org.example.lesson5task1;
 public class Main {
     public static void main(String[] args) {
 
-        System.out.println(checkText("kajak"));
-        System.out.println(checkText(""));
-        System.out.println(checkText("qwerty"));
+        checkText("kajak");
+        checkText("");
+        checkText("qwerty");
 
     }
 
-    public static String checkText(String text) {
+    public static void checkText(String text) {
         if (isNotEmpty(text)) {
             System.out.println("Text is not empty.");
             System.out.println("Text is a palindrome: " + isPalindrome(text));
@@ -17,19 +17,18 @@ public class Main {
         } else {
             System.out.println("Text is empty");
         }
-        return "";
     }
 
     private static boolean isNotEmpty(String text) {
-        if (text.length() > 0) {
-            return true;
-        } else return false;
+        return text != null && text.length() > 0;
     }
 
     private static boolean isPalindrome(String text) {
-        for (int i = 0; i < text.length(); i++)
-            if (text.charAt(i) != text.charAt(text.length() - 1 - i))
+        for (int i = 0; i < text.length(); i++) {
+            if (text.charAt(i) != text.charAt(text.length() - 1 - i)) {
                 return false;
+            }
+        }
         return true;
     }
 
