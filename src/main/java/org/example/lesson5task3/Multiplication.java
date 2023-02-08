@@ -5,4 +5,9 @@ public class Multiplication implements MathematicalOperation {
     public double calculate(double a, double b) {
         return a * b;
     }
+
+    @Override
+    public char getSign() {
+        return '*';
+    }
 }

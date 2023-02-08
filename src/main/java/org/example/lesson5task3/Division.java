@@ -8,4 +8,9 @@ public class Division implements MathematicalOperation {
         } else
             return a / b;
     }
+
+    @Override
+    public char getSign() {
+        return '/';
+    }
 }
