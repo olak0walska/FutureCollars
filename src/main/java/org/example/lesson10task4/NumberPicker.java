@@ -1,30 +1,35 @@
 package org.example.lesson10task4;
 
+import java.util.ArrayList;
+import java.util.List;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 public class NumberPicker {
-    public static String getTypeOfNumber(String number) {
-        Pattern pattern = Pattern.compile("^[+-]?[0-9]+$");
-        Matcher matcher = pattern.matcher(number);
-        boolean matches = matcher.matches();
-        if (matches) {
-            return number + " to liczba całkowita";
-        } else {
-            Pattern pattern2 = Pattern.compile("^[+-]?([0-9]*)[.]{1}[0-9]+$");
-            Matcher matcher2 = pattern2.matcher(number);
-            boolean matches2 = matcher2.matches();
-            if (matches2)
-                return number + " to liczba zmiennoprzecinkowa";
-            if (matches2 == false || matches == false) {
-                Pattern pattern3 = Pattern.compile("^(?:-?\\d*)\\.?\\d+[eE][-\\+]?\\d+$");
 
-                Matcher matcher3 = pattern3.matcher(number);
-                boolean matches3 = matcher3.matches();
-                if (matches3)
-                    return number + " to liczba w notacji naukowej";
+    public List<String> getIntegers(List<String> numbers) {
+        return getNumbers(numbers, "^[+-]?[0-9]+$");
+
+    }
+
+    public List<String> getDoubles(List<String> numbers) {
+        return getNumbers(numbers, "^[+-]?([0-9]*)[.]{1}[0-9]+$");
+    }
+
+    public List<String> getScientificNotation(List<String> numbers) {
+        return getNumbers(numbers, "^(?:-?\\d*)\\.?\\d+[eE][-\\+]?\\d+$");
+    }
+
+    public List<String> getNumbers(List<String> numbers, String regex) {
+        Pattern pattern = Pattern.compile(regex);
+
+        List<String> results = new ArrayList<>();
+        for (String number : numbers) {
+            Matcher matcher = pattern.matcher(number);
+            if (matcher.matches()) {
+                results.add(number);
             }
         }
-        return "";
+        return results;
     }
 }
