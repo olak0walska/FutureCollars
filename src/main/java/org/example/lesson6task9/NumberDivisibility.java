@@ -1,7 +1,7 @@
 package org.example.lesson6task9;
 
 public class NumberDivisibility {
-    public static void divide(int[] numbers) {
+    public static void validate(int[] numbers) {
         for (int number : numbers) {
             try {
                 if (number % 3 != 0) {
